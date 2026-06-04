@@ -1,0 +1,132 @@
+.wrapper {
+  margin-top: 4px;
+}
+
+/* ===== ADD BUTTON ===== */
+.addBtn {
+  width: 100%;
+  background: transparent;
+  border: 1px dashed #d0d0d0;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12px;
+  color: #999;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  text-align: left;
+}
+
+.addBtn:hover {
+  background: #f7f8fa;
+  color: #555;
+  border-color: #bbb;
+}
+
+/* ===== FORM ===== */
+.form {
+  background: #f7f8fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* ===== TITLE INPUT ===== */
+.input {
+  width: 100%;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 13px;
+  color: #1c2833;
+  background: #ffffff;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #378add;
+}
+
+/* ===== SELECT ROW ===== */
+.row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.select {
+  flex: 1;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #444;
+  background: #ffffff;
+  outline: none;
+  min-width: 0;
+}
+
+.select:focus {
+  border-color: #378add;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.submitBtn {
+  flex: 1;
+  background: #1a5276;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.submitBtn:hover {
+  background: #154360;
+}
+
+.cancelBtn {
+  flex: 1;
+  background: transparent;
+  color: #888;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  transition: background 0.15s;
+}
+
+.cancelBtn:hover {
+  background: #f0f0f0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .input {
+    font-size: 16px; /* prevents iOS zoom on input focus */
+    padding: 10px;
+  }
+
+  .select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .submitBtn,
+  .cancelBtn {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .addBtn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

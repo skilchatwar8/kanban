@@ -1,0 +1,81 @@
+.column {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+  padding: 14px;
+  min-width: 230px;
+  flex: 1;
+  max-width: 300px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+/* Highlight when a card is dragged over this column */
+.dragOver {
+  background: #eaf3fb;
+  border-color: #378add;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1c2833;
+}
+
+.count {
+  font-size: 12px;
+  background: #f0f2f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 1px 9px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* ===== CARD LIST ===== */
+.cardList {
+  min-height: 60px;
+  margin-bottom: 8px;
+}
+
+.emptyText {
+  font-size: 12px;
+  color: #bbb;
+  text-align: center;
+  padding: 16px 0;
+  font-style: italic;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .column {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+}

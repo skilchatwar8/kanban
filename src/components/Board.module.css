@@ -1,0 +1,91 @@
+/* ===== DESKTOP: side-by-side columns ===== */
+.board {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  min-height: calc(100vh - 140px);
+  padding-bottom: 24px;
+}
+
+/* ===== MOBILE COLUMN TABS ===== */
+.mobileTabs {
+  display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet: allow horizontal scroll */
+@media (max-width: 1024px) {
+  .board {
+    overflow-x: auto;
+    padding-bottom: 16px;
+    /* Snap scrolling for a nice swipe feel */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Mobile: show one column at a time with tab switcher */
+@media (max-width: 640px) {
+  .mobileTabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    scrollbar-width: none;
+  }
+
+  .mobileTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobileTab {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    flex-shrink: 0;
+  }
+
+  .mobileTab.active {
+    background: #1a5276;
+    color: #ffffff;
+    border-color: #1a5276;
+  }
+
+  .mobileTabDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .mobileTabCount {
+    background: rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 0px 5px;
+    font-size: 11px;
+  }
+
+  .mobileTab:not(.active) .mobileTabCount {
+    background: #f0f2f5;
+    color: #888;
+  }
+
+  .board {
+    display: block;
+    min-height: auto;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+}
