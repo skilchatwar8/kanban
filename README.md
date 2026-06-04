@@ -19,16 +19,16 @@ Built by **Shubham Kilchatwar** as a portfolio project.
 
 ## 🧠 React Concepts Used
 
-| Concept | Where Used |
-|---|---|
-| `useState` | Managing cards list, form open/close, input values, drag state |
-| `props` | Passing data and handler functions between components |
-| `props drilling` | App → Board → Column → Card / AddCardForm |
-| `.map()` | Rendering list of columns and cards |
-| `.filter()` | Getting cards per column |
-| Controlled inputs | Title input, tag & priority selects in AddCardForm |
-| Event handlers | onClick, onDragStart, onDragOver, onDrop, onKeyDown |
-| CSS Modules | Scoped styles per component |
+| Concept           | Where Used                                                     |
+| ----------------- | -------------------------------------------------------------- |
+| `useState`        | Managing cards list, form open/close, input values, drag state |
+| `props`           | Passing data and handler functions between components          |
+| `props drilling`  | App → Board → Column → Card / AddCardForm                      |
+| `.map()`          | Rendering list of columns and cards                            |
+| `.filter()`       | Getting cards per column                                       |
+| Controlled inputs | Title input, tag & priority selects in AddCardForm             |
+| Event handlers    | onClick, onDragStart, onDragOver, onDrop, onKeyDown            |
+| CSS Modules       | Scoped styles per component                                    |
 
 ---
 
@@ -61,25 +61,30 @@ kanban-board/
 ## ⚙️ How to Run Locally
 
 ### Step 1 — Install Node.js
+
 Download from: https://nodejs.org (LTS version)
 
 ### Step 2 — Clone or Download the project
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/kanban-board.git
 cd kanban-board
 ```
 
 ### Step 3 — Install dependencies
+
 ```bash
 npm install
 ```
 
 ### Step 4 — Start the dev server
+
 ```bash
 npm run dev
 ```
 
 ### Step 5 — Open in browser
+
 Visit: **http://localhost:5173**
 
 ---
@@ -89,6 +94,7 @@ Visit: **http://localhost:5173**
 ```bash
 npm run build
 ```
+
 Output goes to `/dist` folder — ready to deploy on Netlify, Vercel, or GitHub Pages.
 
 ---
